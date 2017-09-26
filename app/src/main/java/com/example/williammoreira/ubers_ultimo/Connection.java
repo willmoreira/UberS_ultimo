@@ -76,7 +76,9 @@ public class Connection {
             for (int i = 0; i < json.length(); i++) {
                 JSONObject obj = json.getJSONObject(i);
                 // found.add(new Marker(obj.getJSONObject("geometry").getJSONArray("coordinates").getDouble(0),obj.getJSONObject("geometry").getJSONArray("coordinates").getDouble(1), obj.getJSONObject("properties").getString("name")));
-                found.add(new Marker(obj.getDouble("lat"), obj.getDouble("long"),obj.getString("id")));
+                //found.add(new Marker(obj.getDouble("lat"), obj.getDouble("long"),obj.getString("id"),obj.getString("unidade")));
+                found.add(new Marker(obj.getDouble("lat"), obj.getDouble("long"),obj.getString("id"),obj.getString("unidade"),obj.getString("end"),obj.getString("hfun"),obj.getString("tel")));
+
 
             }
 
