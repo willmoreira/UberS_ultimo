@@ -128,7 +128,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // for ActivityCompat#requestPermissions for more details.
 
 
-
+            if (lm.isProviderEnabled(LocationManager.GPS_PROVIDER))// Verificando Status do Model e exibindo em forma de Mensagemx
+            {
+                Toast.makeText(this, "Model available", 3000).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Model not available", 3000).show();
+            }
+            return;
         }
 
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 500 , gps);
